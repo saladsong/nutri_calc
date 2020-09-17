@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta property="og:title" content="Check your Supplements: 영양제 과다복용 계산기">
+  <meta property="og:description" content="영양제 과다복용 여부를 계산해드립니다. 지금 내가 먹는 영양제들의 궁합을 확인해보세요.">
+  <meta property="og:image" content="../static/supplements_1.jpg">
+  <title>Check your Supplements - SNU HCC x SNU AFBL</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static',filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">SNU HCC x SNU AFBL</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">2020 융합과학기술개론 Team 9</a></li>
+      </ul>
+    
+      <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Site map</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br><br>
+        <h3 class="header center grey-text text-darken-3">Check your Supplements: 영양제 과다복용 계산기</h3>
+        <div class="row center">
+          <h6 class="header col s12 grey-text text-darken-2">현대인의 필수품이 된 영양제, 나는 과연 적절하게 섭취하고 있을까?</h6>
+          <h6 class="header col s12 grey-text text-darken-2">지금 먹고 있는 영양제로 충분한지, 혹시 너무 과도하진 않은지, 내가 먹는 영양제들의 궁합을 간단하게 확인해보세요.</h6>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="parallax"><img src="../static/supplements_7.jpg"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <!-- <form action="/ret" method="post"> -->
+        <div class="row">
+            <div class="input-field col s12">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">done</i></h2>
+                <h5 class="center">STEP 1. 섭취 영양제 선택</h5>
+                <p class="center light">다음 중 현재 하루에 드시고 계시는 영양제를 모두 선택해 주세요.</p>
+              </div>
+            </div>
+        </div>
+        <br>
+    
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_nutricore_mv"/>
+                        <span>뉴트리코어 멀티비타민미네랄</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Nutricore_multivitamin_mineral.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_centrum_mv_fm"/>
+                        <span>센트룸 멀티비타민 포맨</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Centrum_multivitamin_mineral_for_men.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_centrum_mv_fw"/>
+                        <span>센트룸 멀티비타민 포우먼</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Centrum_multivitamin_mineral_for_women.jpg">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_cenovis_mv"/>
+                        <span>세노비스 어드밴스드 트리플러스 멀티비타민</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Cenovis_advanced_triplus_multivitamin.jpg">
+            </div>
+  
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_aronamin_gold"/>
+                        <span>아로나민 골드</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Aronamin_gold.jpg">
+            </div>
+  
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_aronamin_c"/>
+                        <span>아로나민 씨플러스</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Aronamin_C_plus.jpg">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_impactamin"/>
+                        <span>임팩타민</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Impactamin.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_impactamin_pre"/>
+                        <span>임팩타민 프리미엄</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/Impactamin_premium.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_nutrione_lutein"/>
+                        <span>뉴트리원라이프 루테인 지아진틴 164 EX</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/NutrioneLife_Lutein.jpg">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_ahngook_lutein"/>
+                        <span>안구건강 NEW 눈에 좋은 루테인 플러스</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/AhnGook_Luteinplus.jpg">
+            </div>
+  
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_ckd_lutein"/>
+                        <span>종근당 건강 아이클리어 루테인 지아잔틴</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/ckdhc_eyeclear.jpg">
+            </div>
+  
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_ckd_milkth"/>
+                        <span>종근당 건강 헬씨칸 밀크씨슬 영양제</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="300" src="../static/ckdhc_healthycan.jpg">
+            </div>
+        </div>    
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_boto_milkth"/>
+                        <span>보뚜 간에좋은 밀크씨슬 프리미엄</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="250" src="../static/boto_milkthistle_premium.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_gnm_millkth"/>
+                        <span>자연의 품격 건강한 간 밀크씨슬</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="250" src="../static/GNM_milkthistle.jpg">
+            </div>
+
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_ckd_cal"/>
+                        <span>종근당 칼슘 앤 마그네슘 비타민D 아연</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="240" src="../static/ckdhc_calcium_magnesium.jpg">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_vitahalo_cal"/>
+                        <span>비타할로 영양제 칼슘 마그네슘 비타민D 아연</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="240" src="../static/vitahalo_calcium_magnesium.jpg">
+            </div>
+  
+            <div class="col s12 m4">
+
+                    <p>
+                      <label>
+                        <input type="checkbox" id="check_mapletree_cal"/>
+                        <span>메이플트리 칼슘마그네슘아연 플러스 비타민D</span>
+                      </label>
+                    </p>
+                <img class="materialboxed" width="240" src="../static/mapletree_calcium_magnesium.jpg">
+            </div>
+        </div>
+        <br>
+        <br>                
+
+        <div class="divider"></div>
+        <div class="row">
+            <div class="input-field col s12">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">done_all</i></h2>
+                <h5 class="center">STEP 2. 개인정보 입력</h5>
+                <p class="center light">연령/성별에 따른 권장 섭취량을 기준으로 적정/과다 복용 여부를 계산하기 위해 간단한 개인정보를 알려주세요.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">account_circle</i></h2>
+              <h6 class="center">이름</h6>
+              <input name="name" id="name" type="text">
+            </div>
+          </div>
+
+          <div class="input-field col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">cake</i></h2>
+              <h6 class="center">나이</h6>
+              <input name="age" id="age" type="number">
+            </div>
+            </div>
+
+          <div class="input-field col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">wc</i></h2>
+              <h6 class="center">성별</h6>
+              <select name="gender" id="gender">
+                <option value="" disabled selected>Choose your gender</option>
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      <div class="row center">
+        <div class="col s12">
+          <button class="center btn waves-effect waves-light" id="go_Btn">결과 확인
+            <i class="material-icons right">chevron_right</i>
+          </button>
+        </div>
+      </div>
+      <form style="display: none" action="/result" method="POST" id="form">
+        <input type="hidden" id="name_" name="name_" value=""/>
+        <input type="hidden" id="nut_" name="nut_" value=""/>
+        <input type="hidden" id="pct_" name="pct_" value=""/>
+      </form>
+      <br>
+    
+      <!-- </form> -->
+    
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 lighten-2">Check the balance of supplements you take!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="../static/supplements_9.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">by Project Team #9</h5>
+          <p class="grey-text text-lighten-4">This work was done for the final team project in the class of 'Introduction to Convergence Science and Technology' in the spring of 2020.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js?ver=2"></script>
+  <script src="{{ url_for('static',filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/init.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/nutri.js') }}"></script>
+
+  </body>
+</html>
