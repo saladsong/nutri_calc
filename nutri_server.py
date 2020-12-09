@@ -1,9 +1,6 @@
-from flask import Flask, render_template, request, redirect, jsonify, send_from_directory, make_response, url_for
-#import pit_info as bm
-import csv
-import subprocess
-import random
+from flask import Flask, render_template, request, jsonify, make_response
 import datetime
+import csv
 import pandas as pd
 
 app = Flask(__name__)
@@ -75,6 +72,7 @@ def decide(age, gender):
         gender_age = '(65,74)'
     else:
         gender_age = '(75,)'
+        
     if age > 5 and gender == 'male':
         gender_age = '남 ' + gender_age
     elif age > 5 and gender == 'female':
@@ -93,13 +91,13 @@ def ret():
     gender = request.form.get('gender')
     myevent = request.form.get('myevent')
     drugs = myevent.split(',')
-    print(drugs)
+    #print(drugs)
     calc(drugs)
     result = decide(age, gender)
     nut = list(result.keys())
     pct = list(result.values())
-    print(nut)
-    print(pct)
+    #print(nut)
+    #print(pct)
     res = {
         "name_" : name,
         "nut_" : nut,
@@ -118,8 +116,6 @@ def result():
     response = make_response(render_template('nutri_result.html', nut=nut,name=name,pct=pct))
     response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
     response.headers['Pragma'] = 'no-cache'
-    #return render_template('page2.html', nut=nut,name=name,pct=pct)
-
     return response
 
 if __name__ == '__main__':
